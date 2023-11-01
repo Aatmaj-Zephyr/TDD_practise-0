@@ -1,0 +1,27 @@
+{
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#ecc235",
+        "activityBar.background": "#ecc235",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#0e9273",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#ecc235",
+        "statusBar.background": "#daac14",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#ab8710",
+        "statusBarItem.remoteBackground": "#daac14",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#daac14",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#daac1499",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#daac14",
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}
