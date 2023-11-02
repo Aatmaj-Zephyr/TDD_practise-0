@@ -3,7 +3,9 @@ TDD tests to check the code for the absolute difference between the sums of its 
 """
 
 
-from diagonals import diagonal_difference, is_first_diagonal, first_sum, is_second_diagonal, second_sum
+import pytest
+from diagonals import diagonal_difference, is_a_square_matrix
+from diagonals import is_first_diagonal, first_sum, is_second_diagonal, second_sum
 
 
 def test_single_element():
@@ -22,6 +24,27 @@ def test_first_diagonal_for_two_by_two_matrix():
     matrix = [1, 0,
               0, 1]
     assert diagonal_difference(matrix) == 2
+
+
+def test_square_matrix():
+    """
+    The function `test_square_matrix()` tests whether a given matrix is a square matrix.
+    """
+    matrix1 = [1, 0, 0]
+    assert is_a_square_matrix(matrix1) is False
+    matrix2 = [1, 0, 0, 0]
+    assert is_a_square_matrix(matrix2) is True
+
+
+def test_incorrect_input():
+    """
+    The function `test_incorrect_input` tests if an error is raised when a non-square matrix is passed
+    to the `diagonal_difference` function.
+    """
+    with pytest.raises(ValueError) as error_info:
+        diagonal_difference([1, 2, 3])
+
+    assert str(error_info.value) == "input provided is not a square matrix"
 
 
 def test_second_diagonal_for_two_by_two_matrix():
@@ -113,6 +136,7 @@ def test_all():
               4, 5, 6,
               9, 8, 9,]
     assert diagonal_difference(matrix) == 2
+
 
 def test_four_by_four_matrix():
     """

@@ -13,9 +13,24 @@ def diagonal_difference(matrix: list[int]) -> int:
     elements on the main diagonal and the sum of the elements on the secondary diagonal of the given
     matrix.
     """
-    sum_of_diagonal = first_sum(matrix)
-    sum_of_diagonal2 = second_sum(matrix)
+    if is_a_square_matrix(matrix):
+        sum_of_diagonal = first_sum(matrix)
+        sum_of_diagonal2 = second_sum(matrix)
+    else:
+        raise ValueError("input provided is not a square matrix")
     return abs(sum_of_diagonal - sum_of_diagonal2)
+
+
+def is_a_square_matrix(matrix: list[int]) -> bool:
+    """
+    The function "is_a_square_matrix" checks if a given matrix is a square matrix.
+
+    :param matrix: The parameter `matrix` is a list of integers
+    :type matrix: list[int]
+    :return: a boolean value indicating whether the input matrix is a square matrix or not.
+    """
+    order = len(matrix) ** 0.5
+    return order // 1 == order
 
 
 def first_sum(matrix: list[int]) -> int:
@@ -53,7 +68,7 @@ def is_first_diagonal(i: int, order: int) -> bool:
 def second_sum(matrix: list[int]) -> int:
     """
     The function `second_sum` calculates the sum of values in the second diagonal of a square matrix.
-    
+
     :param matrix: The parameter `matrix` is a list of integers
     :type matrix: list[int]
     :return: the sum of the values in the second diagonal of the matrix.
