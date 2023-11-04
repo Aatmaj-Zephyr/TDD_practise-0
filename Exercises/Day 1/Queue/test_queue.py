@@ -5,10 +5,16 @@ Tests for queue using TDD
 from tdd_queue import Queue
 import pytest
 
-my_queue = Queue()
 
+@pytest.fixture(name="my_queue")
+def fixture_my_queue():
+    """
+    The function `fixture_my_queue()` returns a new instance of the `Queue` class.
+    :return: The function `fixture_my_queue` is returning an instance of the `Queue` class.
+    """
+    return Queue()
 
-def test_queue_creation():
+def test_queue_creation(my_queue):
     """
     The function `test_queue` tests the `Queue` class by creating a queue and asserting that the length
     of the queue is 0.
@@ -17,10 +23,11 @@ def test_queue_creation():
     assert my_queue.get_length() == 0
 
 
-def test_add_to_queue_increases_length():
+def test_add_to_queue_increases_length(my_queue):
     """
     The function tests whether adding elements to a queue increases its length.
     """
+
     original_length: int = my_queue.get_length()
     for _ in range(5):
         my_queue.add(1)
@@ -28,7 +35,7 @@ def test_add_to_queue_increases_length():
     assert my_queue.get_length() == new_length - original_length
 
 
-def test_remove_decreases_length():
+def test_remove_decreases_length(my_queue):
     """
     The function tests whether removing elements from a queue decreases its length to zero.
     """
@@ -41,7 +48,7 @@ def test_remove_decreases_length():
     assert my_queue.get_length() == 0
 
 
-def test_cannot_remove_from_empty_queue():
+def test_cannot_remove_from_empty_queue(my_queue):
     """
     The function tests whether removing elements from an empty queue raises an error.
     """
@@ -50,10 +57,11 @@ def test_cannot_remove_from_empty_queue():
         my_queue.remove()
 
 
-def test_putting_and_removing():
+def test_putting_and_removing(my_queue):
     """
     The function tests putting and removing elements from a queue in a first-in-first-out (FIFO) order.
     """
+
     my_queue.add(1)
     my_queue.add(2)
     # FIFO

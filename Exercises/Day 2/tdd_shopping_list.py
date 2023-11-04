@@ -4,9 +4,6 @@
 class ShoppingList():
     """The `ShoppingList` class represents a shopping list object that allows users to add items with their
         quantities and units, and retrieve the items and their corresponding quantities with units."""
-    name: str = ""
-    owner_name: str = ""
-    shopping_dictionary: dict = {}
 
     def __init__(self, name: str, owner_name: str) -> None:
         """
@@ -20,6 +17,7 @@ class ShoppingList():
         """
         self.name = name
         self.owner_name = owner_name
+        self.shopping_dictionary: dict = {}
 
     def add(self, item: str, quantity: int, unit: str) -> None:
         """

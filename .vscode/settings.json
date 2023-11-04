@@ -19,7 +19,7 @@
     "titleBar.inactiveForeground": "#15202b99"
   },
   "peacock.color": "#daac14",
-  "python.testing.pytestArgs": ["."],
+  "python.testing.pytestArgs": ["Exercises"],
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
   "[python]": {
@@ -28,5 +28,6 @@
   "python.formatting.provider": "none",
   "python.analysis.autoImportCompletions": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "aiXcoder.showTrayIcon": true
+  "aiXcoder.showTrayIcon": true,
+  "cSpell.words": ["Aatmaj"]
 }

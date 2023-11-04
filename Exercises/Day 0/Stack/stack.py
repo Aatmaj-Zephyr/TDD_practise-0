@@ -5,8 +5,10 @@ class Stack:
     """ The `Stack` class is a data structure that allows for the addition and removal of elements in a
 last-in, first-out (LIFO) manner. """
 
-    length = 0
-    stack_memory_space: list[int] = []
+    def __init__(self) -> None:
+        self.length = 0
+        self.stack_memory_space: list[int] = []
+
 
     def get_length(self,) -> int:
         """

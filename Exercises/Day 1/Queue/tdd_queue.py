@@ -1,5 +1,7 @@
 """The `Queue` class is a basic implementation of a queue data structure in Python, with methods to add
 elements to the queue, remove elements from the queue, and get the length of the queue."""
+
+
 class Queue:
     """Implementation of the Queue data structure.
 
@@ -9,8 +11,13 @@ class Queue:
     Returns:
         _type_: integer
     """
-    length: int = 0
-    queue_memory: list[int] = []
+
+    length: int
+    queue_memory: list[int]
+
+    def __init__(self) -> None:
+        self.length: int = 0
+        self.queue_memory: list[int] = []
 
     def get_length(self,) -> int:
         """
