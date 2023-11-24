@@ -14,7 +14,7 @@ jobs:
       uses: programmingwithalex/pylinter@main
       with:
         python-root: '.'
-        flake8-flags: '--count --show-source --statistics --max-line-length 120 dir/ --max-complexity 3 dir/ --ignore=W293, E231, W292, E226, W291, E302, E111, E225, E228, E301, E275, W391, E303, E271 dir/'
+        flake8-flags: '--count --show-source --statistics --max-line-length 120 dir/ --max-complexity 3 dir/ --ignore=W293,E231,W292,E226,W291,E302,E111,E225,E228,E301,E275,W391,E303,E271 dir/'
         mypy-flags: '--ignore-missing-imports'
         mypy-ignore-dirs-files: 'folder1 folder2/main.py'
         skip-isort: true
