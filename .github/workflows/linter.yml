@@ -1,4 +1,4 @@
-name: linter
+name: checker
 
 on: [push, pull_request,workflow_dispatch]
 
@@ -17,5 +17,28 @@ jobs:
         flake8-flags: '--count --show-source --statistics --max-line-length 120 --max-complexity 3 --ignore=W293,E231,W292,E226,W291,E302,E111,E225,E228,E301,E275,W391,E303,E271'
         mypy-flags: '--ignore-missing-imports'
         skip-isort: true
+  build:
+    name: Run tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.9"]
+
+    steps:
+      - uses: szenius/set-timezone@v1.2
+        with:
+          timezoneLinux: "Europe/Berlin"
+      - uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: pip install pytest pytest-md pytest-emoji pytest-xdist pytest-timeout
+      - uses: pavelzw/pytest-action@v2
+        with:
+          emoji: true
+          verbose: true
+          job-summary: true
 
 
