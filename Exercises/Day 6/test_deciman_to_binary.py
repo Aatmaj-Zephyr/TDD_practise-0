@@ -23,6 +23,7 @@ def test_one():
     """
     assert to_binary(1) == 1
 
+
 def test_nums_that_return_two_digit_outputs():
     """
     The function `test_nums_that_return_two_digit_outputs` tests the `to_binary` function for numbers

@@ -1,7 +1,6 @@
 """
 Decimal to binary conversion for positive numbers. FOr negative numbers it returns an error
 
-
 """
 
 

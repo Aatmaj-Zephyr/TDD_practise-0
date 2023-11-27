@@ -29,5 +29,22 @@
   "python.analysis.autoImportCompletions": false,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "aiXcoder.showTrayIcon": true,
-  "cSpell.words": ["Aatmaj"]
+  "cSpell.words": ["Aatmaj"],
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["comment"],
+        "settings": {
+          "fontStyle": "italic bold"
+        }
+      },
+      {
+        "scope": ["string"],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ],
+    "comments": ""
+  }
 }
