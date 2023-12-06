@@ -19,10 +19,10 @@ lint:
     - git-diff-check
     - isort@5.12.0
     - prettier@3.1.0
-    - trufflehog@3.63.2-rc0
+    - trufflehog@3.63.2
     - flake8@6.1.0
     - pylint@3.0.2
-    - mypy@1.7.0
+    - mypy@1.7.1
 actions:
   disabled:
     - trunk-check-pre-push
