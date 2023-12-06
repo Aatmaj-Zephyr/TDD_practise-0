@@ -7,8 +7,7 @@ def rle(input_string: str) -> str:
     The function `rle` takes an input string, validates it, and then processes it using the RLE
     (Run-Length Encoding) algorithm, returning the encoded output.
 
-    :param input_string: The input_string parameter is a string that represents the input for the RLE
-    (Run-Length Encoding) algorithm
+    :param input_string: Input for the RLE (Run-Length Encoding) algorithm
     :type input_string: str
     :return: The function `rle` is returning the variable `output`, which is a string.
     """
@@ -67,8 +66,7 @@ def input_string_validate(input_string: str) -> bool:
 
     :param input_string: The input_string parameter is a string that you want to validate
     :type input_string: str
-    :return: a boolean value. It returns True if all characters in the input string are digits, and
-    False otherwise.
+    :return: A boolean value returns true if all characters in the input string are digits, and False otherwise.
     """
     for i in input_string:
         if i.isdigit() is not True:

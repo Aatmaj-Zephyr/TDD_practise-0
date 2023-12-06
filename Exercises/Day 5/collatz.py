@@ -3,8 +3,7 @@ def collatz(input_number: int)->int:
     """
     The function collatz takes an input number and returns a new number based on the Collatz conjecture.
     
-    :param input_number: The input_number parameter is an integer that represents the starting number
-    for the Collatz sequence
+    :param input_number: Integer that represents the starting number for the Collatz sequence
     :type input_number: int
     :return: The function `collatz` is returning an integer value.
     """
@@ -20,8 +19,7 @@ def check_input_is_greater_than_0_else_error(input_number:int)->None:
     """
     The function checks if the input number is greater than 0, otherwise it raises a ValueError.
     
-    :param input_number: The input_number parameter is an integer that represents the number to be
-    checked
+    :param input_number: Integer that represents the number to be checked
     :type input_number: int
     """
     if input_number <= 0:
@@ -32,8 +30,7 @@ def handel_odd(input_number:int)->int:
     The function `handel_odd` takes an input number and returns the result of multiplying it by 3 and
     adding 1.
     
-    :param input_number: The input_number parameter is an integer that represents the number you want to
-    handle
+    :param input_number: Integer that represents the number you want to handle
     :type input_number: int
     :return: the result of multiplying the input number by 3 and then adding 1.
     """

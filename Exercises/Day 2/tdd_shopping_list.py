@@ -24,11 +24,9 @@ class ShoppingList():
         The add function adds an item, its quantity, and unit to a shopping dictionary, but raises an error
         if the item is already in the list.
 
-        :param item: The `item` parameter is a string that represents the name or description of the item
-        being added to the shopping list
+        :param item: The `item` parameter is a string that represents the name or description of the item being added to the shopping list
         :type item: str
-        :param quantity: The parameter `quantity` represents the number of units of the item that you want
-        to add to the shopping list
+        :param quantity: Number of units of the item that you want to add to the shopping list
         :type quantity: int
         :param unit: The "unit" parameter in the "add" method represents the unit of measurement for the
         quantity of the item being added to the shopping list. It could be something like "kg", "lbs",
@@ -51,11 +49,9 @@ class ShoppingList():
         """
         The function checks if an item is already in a shopping list dictionary.
 
-        :param item: A string representing the item that we want to check if it is already in the shopping
-        list
+        :param item: Item that we want to check if it is already in the shopping list
         :type item: str
-        :return: a boolean value. It returns True if the item is already in the shopping_dictionary, and
-        False otherwise.
+        :return: It returns True if the item is already in the shopping_dictionary, else False.
         """
         return self.shopping_dictionary.get(item) is not None
 
@@ -74,14 +70,13 @@ class ShoppingList():
 
     def format_quantity_with_unit(self, quantity_with_unit: list[str], value: str) -> None:
         """
-        The function `format_quantity_with_unit` takes a list `quantity_with_unit` and a string `value`,
-        splits the string into `quantity` and `unit`, and appends the formatted quantity with unit to the
-        list.
+            The function `format_quantity_with_unit` takes a list `quantity_with_unit` and a string `value`,
+            splits the string into `quantity` and `unit`, and appends the formatted quantity with unit to the
+            list.
 
-        :param quantity_with_unit: A list that will store the formatted quantity with unit values
-        :param value: The `value` parameter is a string that contains a quantity and a unit separated by a
-        colon. For example, it could be "5:kg" or "10:m"
-        """
+            :param quantity_with_unit: A list that will store the formatted quantity with unit values
+            :param value: String that contains a quantity and a unit separated by a colon eg. "5:kg" or "10:m"
+         """
         quantity: str
         unit: str
         quantity, unit = value.split(":")

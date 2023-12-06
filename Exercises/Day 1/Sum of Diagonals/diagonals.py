@@ -9,9 +9,7 @@ def diagonal_difference(matrix: list[int]) -> int:
     :param matrix: The parameter `matrix` is a list of lists, where each inner list represents a row of
     the matrix. Each element in the inner list is an integer
     :type matrix: list[int]
-    :return: The function `diagonal_difference` returns the absolute difference between the sum of the
-    elements on the main diagonal and the sum of the elements on the secondary diagonal of the given
-    matrix.
+    :return: absolute difference between the main diagonal and the secondary diagonal
     """
     if is_a_square_matrix(matrix):
         sum_of_diagonal = first_sum(matrix)
@@ -55,11 +53,9 @@ def is_first_diagonal(i: int, order: int) -> bool:
 
     :param i: The index of the element in a 2D matrix
     :type i: int
-    :param order: The order parameter represents the size of a square matrix. It indicates the number of
-    rows or columns in the matrix
+    :param order: Represents the size of a square matrix. order = no of rows = no of columns
     :type order: int
-    :return: a boolean value indicating whether the given index `i` is on the first diagonal of a square
-    matrix of the given `order`.
+    :return: a boolean value indicating whether the given index `i` is on the first diagonal or not
     """
 
     return i % order == i//order
@@ -88,11 +84,9 @@ def is_second_diagonal(i: int, order: int) -> bool:
 
     :param i: The parameter `i` represents the index of an element in a square matrix
     :type i: int
-    :param order: The order parameter represents the size of a square matrix. It indicates the number of
-    rows and columns in the matrix
+    :param order: The order parameter represents the size of a square matrix.
     :type order: int
-    :return: a boolean value indicating whether the given index `i` belongs to the second diagonal of a
-    square matrix of the given `order`.
+    :return: a boolean value indicating whether the given index `i` is on the second diagonal or not
     """
 
     return i % order == order - i//order - 1

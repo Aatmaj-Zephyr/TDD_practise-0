@@ -21,8 +21,7 @@ last-in, first-out (LIFO) manner. """
         """
         The push function adds a value to the stack memory space and increments the length of the stack.
 
-        :param value: The `value` parameter is an integer that represents the value to be pushed onto the
-        stack
+        :param value: Is an integer that represents the value to be pushed onto the stack
         :type value: int
         """
         self.stack_memory_space.append(value)

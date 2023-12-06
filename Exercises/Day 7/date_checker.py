@@ -39,9 +39,7 @@ class Date:
         
         :param day: The `day` parameter represents the day of the month. It should be an integer value
         :type day: int
-        :param month: The `month` parameter represents the month for which you want to check the last
-        day. It should be an integer value representing the month, where January is 1, February is 2,
-        and so on
+        :param month: The `month` parameter represents the month where January is 1, February is 2, etc
         :type month: int
         """
         months_with_31 = [1, 3, 5, 7, 8, 10, 12]
@@ -56,11 +54,9 @@ class Date:
         
         :param day: An integer representing the day of the month
         :type day: int
-        :param month: The month parameter represents the month of the year. In this case, it is expected to
-        be an integer value representing the month of February, which is denoted by the number 2
+        :param month: The month parameter represents the month of the year. must be 2
         :type month: int
-        :param year: The "year" parameter represents the year for which we want to check if February is
-        valid
+        :param year: The "year" parameter represents the year
         :type year: int
         """
         assert month == 2
@@ -72,11 +68,10 @@ class Date:
     def is_leap_year(self, year: int) -> bool:
         """
         The function checks if a given year is a leap year according to the rules.
-        # Check if the year is divisible by 4 and not divisible by 100
-        # Check if the year is divisible by 400 and not divisible by 100
-        # If any of the above conditions are true, the year is a leap year
-        :param year: The "year" parameter is an integer representing the year for which we want to
-        determine if it is a leap year or not
+        1) Check if the year is divisible by 4 and not divisible by 100
+        2) Check if the year is divisible by 400 and not divisible by 100
+        3) If any of the above conditions are true, the year is a leap year
+        :param year: The "year" parameter is an integer representing the year.
         :type year: int
         :return: a boolean value indicating whether the given year is a leap year or not.
         """
@@ -100,8 +95,6 @@ class Date:
         :param month: The "month" parameter represents the month of a date.
         :type month: int
         :param year: The "year" parameter represents the year value that needs to be checked for an
-        upper bound of 20000. 
-
         :type year: int
         """
         self.check_day_upper_bound(day)
@@ -148,7 +141,6 @@ class Date:
         :param day: An integer representing the day of the month
         :type day: int
         :param month: The parameter "month" represents the month of a date. It should be an integer
-        value
         :type month: int
         :param year: The "year" parameter is an integer representing a year
         :type year: int

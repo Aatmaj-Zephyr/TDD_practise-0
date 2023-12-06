@@ -10,8 +10,7 @@ def fixture_my_fruit_shopping_list():
     """
     The function `fixture_my_fruit_shopping_list` returns a `ShoppingList` object with the name "Fruits"
     and owner "Aatmaj".
-    :return: The fixture `my_fruit_shopping_list` is returning a `ShoppingList` object with the name
-    "Fruits" and owner "Aatmaj".
+    :return: R `ShoppingList` object with the name "Fruits" and owner "Aatmaj".
     """
 
     return ShoppingList("Fruits", "Aatmaj")

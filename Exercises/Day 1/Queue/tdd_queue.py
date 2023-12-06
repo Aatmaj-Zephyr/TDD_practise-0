@@ -5,11 +5,9 @@ elements to the queue, remove elements from the queue, and get the length of the
 class Queue:
     """Implementation of the Queue data structure.
 
-    Raises:
-        IndexError: if the queue is empty and a remove operation is attempted
+    :Raises: IndexError: if the queue is empty and a remove operation is attempted
 
-    Returns:
-        _type_: integer
+    :Returns:_type_: integer
     """
 
     length: int
@@ -40,6 +38,7 @@ class Queue:
         """
         The `remove` function removes and returns the first element from a queue, raising an error if the
         queue is empty.
+        
         :return: The value that is being removed from the queue is being returned.
         """
         if self.length <= 0:
