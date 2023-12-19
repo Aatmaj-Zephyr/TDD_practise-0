@@ -12,7 +12,6 @@ def fixture_my_fruit_shopping_list():
     and owner "Aatmaj".
     :return: R `ShoppingList` object with the name "Fruits" and owner "Aatmaj".
     """
-
     return ShoppingList("Fruits", "Aatmaj")
 
 def test_for_inititialization_of_shopping_list(my_fruit_shopping_list):

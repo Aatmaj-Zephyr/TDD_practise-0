@@ -11,8 +11,7 @@ class ShoppingList():
 
         :param name: The name parameter is a string that represents the name of an object
         :type name: str
-        :param owner_name: The `owner_name` parameter is a string that represents the name of the owner of
-        an object
+        :param owner_name: Name of the owner of an object
         :type owner_name: str
         """
         self.name = name
@@ -24,7 +23,7 @@ class ShoppingList():
         The add function adds an item, its quantity, and unit to a shopping dictionary, but raises an error
         if the item is already in the list.
 
-        :param item: The `item` parameter is a string that represents the name or description of the item being added to the shopping list
+        :param item: Name of the item being added to the shopping list
         :type item: str
         :param quantity: Number of units of the item that you want to add to the shopping list
         :type quantity: int
