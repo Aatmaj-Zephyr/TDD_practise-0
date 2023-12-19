@@ -48,4 +48,17 @@ def test_nums_that_return_four_digit_outputs():
     """
     assert to_binary(8) == 1000
     assert to_binary(9) == 1001
+    assert to_binary(15) == 1111
+
+def test_bigger_nums():
+    """
+    Testing of bigger numbers in range 20, 300 etc
+    """
+    assert to_binary(20) == 10100
+    assert to_binary(300) == 100101100
+    assert to_binary(3000) == 101110111000
+
+
+
+
     
