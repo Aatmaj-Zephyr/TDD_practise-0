@@ -1,11 +1,14 @@
 """Code to test the conversion from decimal to binary"""
 from decimal_to_binary import to_binary
 import pytest
+
+
 def test_zero():
     """
     The function `test_zero` tests if the `to_binary` function returns 0 when given 0 as input.
     """
     assert to_binary(0) == 0
+
 
 def test_negative_number_returns_error():
     """
@@ -15,6 +18,7 @@ def test_negative_number_returns_error():
     with pytest.raises(ValueError) as error_info:
         to_binary(-1)
     assert error_info is not None
+
 
 def test_one():
     """
@@ -32,6 +36,7 @@ def test_nums_that_return_two_digit_outputs():
     assert to_binary(2) == 10
     assert to_binary(3) == 11
 
+
 def test_nums_that_return_three_digit_outputs():
     """
     The function `test_nums_that_return_three_digit_outputs` tests the `to_binary` function for three
@@ -40,6 +45,7 @@ def test_nums_that_return_three_digit_outputs():
     assert to_binary(4) == 100
     assert to_binary(5) == 101
     assert to_binary(6) == 110
+
 
 def test_nums_that_return_four_digit_outputs():
     """
@@ -50,6 +56,7 @@ def test_nums_that_return_four_digit_outputs():
     assert to_binary(9) == 1001
     assert to_binary(15) == 1111
 
+
 def test_bigger_nums():
     """
     Testing of bigger numbers in range 20, 300 etc
@@ -57,8 +64,3 @@ def test_bigger_nums():
     assert to_binary(20) == 10100
     assert to_binary(300) == 100101100
     assert to_binary(3000) == 101110111000
-
-
-
-
-    
