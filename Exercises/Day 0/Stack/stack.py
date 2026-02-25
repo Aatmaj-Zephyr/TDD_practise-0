@@ -37,4 +37,7 @@ last-in, first-out (LIFO) manner. """
             raise IndexError("Cannot pop from an empty stack")
         value: int = self.stack_memory_space[self.length - 1]
         self.length -= 1
+
         return value
+    
+
